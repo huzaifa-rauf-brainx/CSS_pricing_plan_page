@@ -1,0 +1,192 @@
+.page_pricing {
+    font-family: -apple-system, system-ui, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    background-color: #F8F9FA;
+}
+.page_pricing .main_heading {
+    color: #3B3663;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-weight:500;
+    margin-top: 40px;
+}
+.page_pricing .side_bar {
+    width: 100%;
+    max-width: 90px;
+    background-color: #0D1326;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 62px;
+    right: 0;
+}
+.side_bar_main .side_bar_options {
+    display: flex;
+    flex-direction: column;
+    color: #7F8599;
+}
+.side_bar_options .fa {
+    text-align: center;
+    font-weight: 500;
+}
+.side_bar_options .side_heading {
+    text-decoration: none;
+    text-align: center;
+    color: #7F8599;
+    font-size: 16px;
+    font-weight: 400;
+}
+.side_bar .side_bar_collapse {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #41414d;
+    margin: 0 5px;
+}
+.side_bar_collapse .fa {
+    text-decoration: none;
+    color: #7F8599;
+    font-size: 36px;
+}
+.side_bar_options .fa-arrow-left {
+    margin-top: 27px;
+    padding: 8px;
+    cursor: pointer;
+}
+.side_bar_options .fa-download {
+    margin-top: 20px;
+    padding: 7px;
+    cursor: pointer;
+}
+.side_bar_options .fa-shopping-cart {
+    margin-top: 20px;
+    padding: 7px;
+    cursor: pointer;
+}
+.side_bar_options .side_heading_last {
+    margin-bottom: 60px;
+}
+.main_layout .pricing_plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.pricing_plans .plan_limited_basic {
+    background-color: #FFFFFF;
+    width: 310px;
+    height: 410px;
+    border: 3px solid #E8E8E8;
+    border-radius: 8px;
+    margin-top: 45px;
+    transition: transform 0.5s;
+}
+.plan_limited_basic .plan_type, .plan_brilliant .plan_type {
+    text-align: center;
+}
+.pricing_plans .plan_limited_basic:hover {
+    /* margin-top: 25px; */
+    transform: translateY(-20px);
+}
+.plan_type .main_heading_plan {
+    font-size: 30px;
+    font-weight: 600;
+    color: #3B3663;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.plan_type .sub_head_plan {
+    color: #5A5F6C;
+    margin-top: 10px;
+}
+.plan_type .sub_head_price {
+    font-weight: 700;
+}
+.plan_limited_basic .line-wrapper, .plan_brilliant .line-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+.plan_limited_basic .line-wrapper::before,
+.plan_limited_basic .line-wrapper::after, .plan_brilliant .line-wrapper::before,
+.plan_brilliant .line-wrapper::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #E8E8E8;
+}
+.plan_limited_basic .plan_duration, .plan_brilliant .plan_duration {
+    color: #3BBF53;
+    font-size: 14.4px;
+    border: 1px solid #E8E8E8;
+    border-radius: 15px;
+    padding: 5px 20px;
+    white-space: nowrap;
+}
+.plan_specifics .plan_benefits {
+    padding: 0px 20px;
+}
+.plan_benefits .plan_gains{
+    color: #737882;
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.plan_benefits .plan_gains::before {
+    content: "\003E";
+    color: #3BBF53;
+}
+.plan_gains .plan_members {
+    color: #737882;
+    font-size: 17px;
+    font-weight: 700;
+}
+.plan_limited_basic .plan_button, .plan_brilliant .plan_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.plan_button .get_started_btn {
+    background-color: #F6F6F6;
+    color: #3BBF53;
+    border: none;
+    padding: 13px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}  
+.plan_button .get_started_btn:hover {
+    background-color: #3BBF53;
+    color: #FFFFFF;
+}
+.main_layout .plan_brilliant {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 490px;
+    border: 3px solid #3BBF53;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: transform 0.5s;
+}
+.main_layout .plan_brilliant:hover {
+    transform: translateY(-20px);
+}
+.plan_brilliant .get_started_btn {
+    background-color: #3BBF53;
+    color: #FFFFFF;
+}
+.main_layout .footer {
+    color: #797D87;
+    text-align: center;
+    margin-top: 50px;
+}
+.footer h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+.footer .footer_link {
+    text-decoration: none;
+    color: #5D597C;
+}
+.footer .footer_link:hover {
+    color: #3BBF53;
+}
