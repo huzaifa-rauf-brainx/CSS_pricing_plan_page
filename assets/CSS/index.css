@@ -16,14 +16,17 @@
     background-color: #0D1326;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    position: absolute;
+    position: fixed;
     top: 62px;
     right: 0;
+    z-index: 1;
 }
 .side_bar_main .side_bar_options {
     display: flex;
     flex-direction: column;
     color: #7F8599;
+    /* padding: 15px 0; */
+    margin-top: 30px;
 }
 .side_bar_options .fa {
     text-align: center;
@@ -48,21 +51,27 @@
     font-size: 36px;
 }
 .side_bar_options .fa-arrow-left {
-    margin-top: 27px;
-    padding: 8px;
+    padding: 6px 8px;
     cursor: pointer;
 }
+.side_bar_item {
+    display: flex;
+    flex-direction: column;
+}
+.side_bar_options .side_bar_item:hover i,
+.side_bar_options .side_bar_item:hover .side_heading
+{
+    color: #E6EBFF;
+}
 .side_bar_options .fa-download {
-    margin-top: 20px;
-    padding: 7px;
+    padding: 4px 8px;
     cursor: pointer;
 }
 .side_bar_options .fa-shopping-cart {
-    margin-top: 20px;
-    padding: 7px;
+    padding: 4px 8px;
     cursor: pointer;
 }
-.side_bar_options .side_heading_last {
+.side_bar_main .side_heading_last {
     margin-bottom: 60px;
 }
 .main_layout .pricing_plans {
@@ -71,7 +80,16 @@
     flex-wrap: wrap;
     gap: 20px;
 }
-.pricing_plans .plan_limited_basic {
+.pricing_plans .plan_limited {
+    background-color: #FFFFFF;
+    width: 310px;
+    height: 410px;
+    border: 3px solid #E8E8E8;
+    border-radius: 8px;
+    margin-top: 45px;
+    transition: transform 0.5s;
+}
+.pricing_plans .plan_basic {
     background-color: #FFFFFF;
     width: 310px;
     height: 410px;
@@ -84,7 +102,6 @@
     text-align: center;
 }
 .pricing_plans .plan_limited_basic:hover {
-    /* margin-top: 25px; */
     transform: translateY(-20px);
 }
 .plan_type .main_heading_plan {
@@ -149,7 +166,7 @@
     background-color: #F6F6F6;
     color: #3BBF53;
     border: none;
-    padding: 13px 20px;
+    padding: 13px 25px;
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
@@ -166,6 +183,23 @@
     border-radius: 8px;
     margin-top: 10px;
     transition: transform 0.5s;
+    position: relative;
+}
+.plan_brilliant .custom_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 60px solid #3BBF53;
+    border-right: 60px solid transparent;
+}
+.plan_brilliant .custom_border_icon {
+    position: absolute;
+    top: -50px;
+    left: 5px;
+    height: 18px;
+    fill: white;
 }
 .main_layout .plan_brilliant:hover {
     transform: translateY(-20px);
@@ -189,4 +223,81 @@
 }
 .footer .footer_link:hover {
     color: #3BBF53;
+}
+@media (max-width: 768px) {
+    .main_layout .pricing_plans {
+        justify-content: flex-start;
+        padding: 25px 20px;
+    }
+    .pricing_plans .plan_basic, .pricing_plans .plan_limited {
+        width: 350px;
+    }
+    .main_layout .pricing_plans {
+        gap: 0px 20px;
+    }
+    .main_layout .plan_brilliant {
+        width: 330px;
+    }
+    .page_pricing .main_heading {
+        margin-bottom: 0px;
+    }
+    .pricing_plans .plan_basic {
+        margin-top: 0px;
+    }
+    .main_layout .footer {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 425px) {
+    .footer .footer_text {
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 25px;
+        margin-top: 30px;
+    }
+    .page_pricing .main_heading {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+    .main_layout .pricing_plans {
+        padding: 0 25px;
+    }
+    .pricing_plans .plan_limited {
+        margin-top: 30px;
+    }
+    .pricing_plans .plan_brilliant {
+        margin-top: 30px;
+        width: 350px;
+    }
+    .pricing_plans .plan_basic {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 375px) {
+    .footer .footer_text {
+        font-size: 17px;
+        padding: 0 0;
+        line-height: 25px;
+    }
+    .page_pricing .main_heading {
+        font-size: 30px;
+        margin-top: 40px;
+    }
+    .main_layout .pricing_plans {
+        padding: 0 9px;
+    }
+    .pricing_plans .plan_limited {
+        margin-top: 35px;
+    }
+    .pricing_plans .plan_brilliant {
+        margin-top: 35px;
+        width: 350px;
+    }
+    .pricing_plans .plan_basic {
+        margin-top: 35px;
+    }
+    .plan_type .main_heading_plan {
+        font-size: 25px;
+    }
 }
